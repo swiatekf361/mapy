@@ -31,18 +31,6 @@ function hoverover(e) {
     }
 }
 
-infos = {
-    nazwa: document.getElementById("nazwa"),
-    siedziba: document.getElementById("siedziba"),
-    wojewodztwo: document.getElementById("wojewodztwo"),
-    powierzchnia: document.getElementById("powierzchnia"),
-    ludnosc: document.getElementById("ludnosc"),
-    gestosc: document.getElementById("gestosc"),
-    tablice: document.getElementById("tablice"),
-}
-
-nowopen = null;
-
 function przygotuj_powiaty() {
     powiaty_s = powiaty_csv.split("\r\n");
     powiaty_id = {};
@@ -64,7 +52,9 @@ function szukaj(v) {
     document.body.classList.add("match");
     for (i=1; i<powiaty_s.length; i++) {
         document.getElementById(powiaty_s[i][8]).classList.remove("match");
-        if (powiaty_s[i][0].replace("powiat ", "").toLowerCase().indexOf(v.toLowerCase()) != -1 || (v.toLowerCase() == "miasta") && powiaty_s[i][1] == "miasto na prawach powiatu") {
+        if (powiaty_s[i][0].replace("powiat ", "").toLowerCase().indexOf(v.toLowerCase()) != -1 ||
+        ((v.toLowerCase() == "miasta") && powiaty_s[i][1] == "miasto na prawach powiatu") ||
+        v.toLowerCase() == powiaty_s[i][3]) {
             miejsce.innerHTML += "<li><a href='javascript:hoverover(document.getElementById(\"" + powiaty_s[i][8] + "\"))'>" + powiaty_s[i][0] + "</a></li>";
             document.getElementById(powiaty_s[i][8]).classList.add("match");
         }
