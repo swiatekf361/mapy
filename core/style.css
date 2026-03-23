@@ -7,10 +7,13 @@ span#mapa {
     width: calc(50% - 30px);
     padding: 15px;
     text-align: center;
+    max-height: 100vh;
+    max-height: 100dvh;
 }
 
 span#mapa svg {
-    max-height: 1000px;
+    max-height: 100vh;
+    max-height: calc(100dvh - 40px);
 }
 
 svg path.this {
@@ -70,10 +73,11 @@ span.tab {
     font-family: monospace;
     padding: 4px 6px;
     color: white;
-    font-sizE: 115%;
+    font-size: 115%;
     margin-right: 5px;
     border-radius: 3px;
     border: 2px solid steelblue;
+    display: inline-block;
 }
 
 span.tab.tab-nieuzywane {
@@ -90,6 +94,15 @@ span.tab.tab-zabytek {
 footer {
     color: grey;
     padding: 10px;
+}
+
+a.goback {
+    margin-bottom: 8px;
+    display: none;
+}
+
+body.goback a.goback {
+    display: inline-block;
 }
 
 @media (max-width: 800px) {
