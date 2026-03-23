@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa powiatów (wg województw)</title>
+    <link rel="stylesheet" href="../core/style.css">
+</head>
+<body onload="zaladuj('powiaty-wg-w')">
+    <main>
+        <span id="mapa"></span>
+        <div id="powiat_info">
+            <a href="javascript:pokazwojewodztwa()" class="goback">wróć do województw</a>
+            <ul id="wyszukiwarka"></ul>
+            <span id="more_info">
+            <h2 id="nazwa">wybierz</h2>
+            <p id="siedziba"></p>
+            <p id="wojewodztwo"></p>
+            <p id="powierzchnia"></p>
+            <p id="ludnosc"></p>
+            <p id="gestosc"></p>
+            <p id="tablice"></p>
+            </span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../core/core.js"></script>
+    <script src="../powiaty/script.js"></script>
+    <script src="../core/obrazki.js"></script>
+    <footer>
+    <footer>
+        <i>mapa województw (zmodyfikowana) by <a href="https://commons.wikimedia.org/wiki/File:Wojewodztwa.svg">Tomasz &quot;odder&quot; Kozlowski</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</i><br>
+        <i>mapa powiatów (zmodyfikowana) by <a href="https://commons.wikimedia.org/wiki/File:POLSKA_powiaty.svg">Megaemce</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</i><br>
+        <i>Wszystkie zamieszczone informacje zostały pozyskane z Wikipedii</i>
+    </footer>
+</body>
+</html>
