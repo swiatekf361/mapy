@@ -3,7 +3,6 @@ function pokaz(e) {
     try {
         document.getElementById(nowopen).classList.remove("this");
     } catch (e) {null}
-    console.log(e.id);
     try {
         infos.nazwa.innerText = dane_id[e.id][0];
         infos.siedziba.innerText = "Siedziba władz powiatu: " + dane_id[e.id][1];
@@ -25,7 +24,5 @@ function pokaz(e) {
             "'>" + dane_id[e.id][2][i].replace("[a]", "").replace("[b]", "").replace("[c]", "").replace("[d]", "").replace("[g]", "").replace("[h]", "").replace("[j]", "").replace("[k]", "") + "</span> ";
         document.getElementById(e.id).classList.add("this");
         nowopen = e.id
-    } catch (f) {
-        e.style.fill = "black";
-    }
+    } catch (f) {null}
 }

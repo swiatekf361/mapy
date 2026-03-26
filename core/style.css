@@ -1,14 +1,25 @@
 * {
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-main > svg,
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 100vh;
+}
+
 span#mapa {
-    width: calc(50% - 30px);
+    width: min-content;
     padding: 15px;
     text-align: center;
     max-height: 100vh;
     max-height: 100dvh;
+}
+
+.europa span#mapa {
+    width: 50%;
 }
 
 span#mapa svg {
@@ -16,8 +27,12 @@ span#mapa svg {
     max-height: calc(100dvh - 40px);
 }
 
+svg path {
+    transition: 75ms;
+}
+
 svg path.this {
-    fill: blue;
+    fill: royalblue;
 }
 
 svg path:hover {
@@ -25,15 +40,18 @@ svg path:hover {
 }
 
 body.match svg path.match {
-    fill: darkgray!important;
+    fill: cornflowerblue!important;
 }
 
 main > * {display: inline-block;}
 main * {vertical-align: middle;}
 
 div#powiat_info {
-    /* text-align: center; */
-    width: calc(50% - 10px);
+    width: 50%;
+}
+
+.europa div#powiat_info {
+    width: 30%;
 }
 
 div#powiat_info:has(li) {
@@ -69,25 +87,23 @@ input {
 }
 
 span.tab {
-    background-color: #09f;
+    background-color: aliceblue;
     font-family: monospace;
-    padding: 4px 6px;
-    color: white;
+    padding: 4px 6px;   
     font-size: 115%;
     margin-right: 5px;
     border-radius: 3px;
-    border: 2px solid steelblue;
+    border: 2px solid dodgerblue;
     display: inline-block;
 }
 
 span.tab.tab-nieuzywane {
-    background-color: #8cf;
+    border-color: lightskyblue;
     border-style: dashed;
 }
 
 span.tab.tab-zabytek {
-    background-color: #fd0;
-    color: black;
+    background-color: yellow;
     border-color: goldenrod;
 }
 
@@ -105,7 +121,11 @@ body.goback a.goback {
     display: inline-block;
 }
 
-@media (max-width: 800px) {
-    main > svg, span#mapa {padding: 10px; width: 100%; width: calc(100% - 20px);}
-    div#powiat_info {width: 100%;}
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+    main, main > * {
+        width: 100%!important;
+    }
 }

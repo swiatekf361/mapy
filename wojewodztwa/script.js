@@ -3,7 +3,6 @@ function pokaz(e) {
     try {
         document.getElementById(nowopen).style.fill = "#e0e0e0";
     } catch (e) {null}
-    console.log(e.id);
     try {
         infos.nazwa.innerText = dane_id[e.id][0];
         infos.siedziba.innerText = "Siedziba: " + dane_id[e.id][1].replace("1)", " (wojewody); ").replace("2)", " (sejmiku wojewódzkiego)");
@@ -23,6 +22,6 @@ function pokaz(e) {
         e.style.fill = dane_id[e.id][1] == "miasto na prawach powiatu"? "navy" : "blue";
         nowopen = e.id
     } catch (f) {
-        e.style.fill = "black";
+        null
     }
 }

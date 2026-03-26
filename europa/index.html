@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa polityczna Europy</title>
+    <link rel="stylesheet" href="../core/style.css">
+</head>
+<body onload="zaladuj('europa')" class="europa">
+    <main>
+        <span id="mapa"></span>
+        <div id="powiat_info">
+            <input type="search" name="europa" id="europa" oninput="szukaj(this.value)" placeholder="Szukaj państwa">
+            <ul id="wyszukiwarka"></ul>
+            <span id="more_info">
+            <span id="images">
+                <img src="" alt="" id="flaga">
+            </span>
+            <h2 id="nazwa">wybierz państwo</h2>
+            <i><p id="rodzaj"></p></i>
+            <p id="stolica"></p>
+            <p id="powierzchnia"></p>
+            <p id="ludnosc"></p>
+            <p id="gestosc"></p>
+            <p id="ue"></p>
+            </span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../core/core.js"></script>
+    <script src="../core/obrazki.js"></script>
+    <footer><i>mapa (zmodyfikowana) by <a href="https://commons.wikimedia.org/wiki/File:Blank_political_map_Europe_in_2008_(with_Kosovo).svg">Júlio Reis, Ssolbergj &amp; others, see File:Blank political map Europe in 2006 WF.svg &amp; File:Europe countries.svg histories.</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</i><br><i>Wszystkie zamieszczone informacje zostały pozyskane z Wikipedii</i></footer>
+</body>
+</html>
