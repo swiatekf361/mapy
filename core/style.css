@@ -124,8 +124,13 @@ body.goback a.goback {
 @media (max-width: 1000px) {
     main {
         flex-direction: column;
+        max-height: initial;
     }
     main, main > * {
         width: 100%!important;
+    }
+    span#mapa svg {
+        width: calc(100vw - 40px);
+        height: min-content;
     }
 }

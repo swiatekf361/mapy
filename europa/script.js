@@ -9,7 +9,7 @@ function pokaz(e) {
         infos.ludnosc.innerText = "Liczba ludności: " + dane_id[e.id][2];
         infos.gestosc.innerText = "Gęstość zaludnienia: " + dane_id[e.id][3] + " os/km²";
         infos.stolica.innerText = "Stolica: " + dane_id[e.id][4];
-        infos.ue.innerText = "UE: " + dane_id[e.id][5];
+        infos.ue.innerText = (dane_id[e.id][5] == "true")? "Należy do Unii Europejskiej" : "Nie należy do Unii Europejskiej";
         infos.rodzaj.innerText = dane_id[e.id][6];
         infos.flaga.src = obrazy.europa_flagi[dane_id[e.id][0].toLowerCase()];
         e.style.fill = dane_id[e.id][1] == "miasto na prawach powiatu"? "navy" : "blue";
